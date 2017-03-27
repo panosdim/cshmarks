@@ -13,14 +13,14 @@ else
     set t = `mktemp -t bashmarks.XXXXXX || exit 1`
 
     # purge line
-    sed "/^$1 /d" "$SDIRS" > "$t"
-    \mv "$t" "$SDIRS"
+    \sed "/^$1 /d" "$CDIRS" > "$t"
+    \mv "$t" "$CDIRS"
 
     # cleanup temp file
     \rm -f -- "$t"
     
     # Save the new bookmark
-    echo "$1 $cwd" >> $SDIRS
+    echo "$1 $cwd" >> $CDIRS
     echo "\033[0;32mbookmark $1 saved\033[0m"
   endif
 endif

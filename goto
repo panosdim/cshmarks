@@ -5,7 +5,7 @@ if ( "X$1" == "X" ) then
   exit
 else
   # Find bookmark and goto
-  set bm = `sed -n "/^$1 /p" "$SDIRS"`
+  set bm = `\sed -n "/^$1 /p" "$CDIRS"`
   if ( "$bm" == "" ) then
     echo "\033[0;31mWARNING: '${1}' bookmark does not exist\033[00m"
   else

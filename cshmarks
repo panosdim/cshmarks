@@ -1,8 +1,8 @@
 #!/usr/bin/env csh
 
 # setup file to store bookmarks
-if ( ! "$?SDIRS" ) setenv SDIRS ~/.cdirs
-touch $SDIRS
+if ( ! "$?CDIRS" ) setenv CDIRS ~/.cdirs
+touch $CDIRS
 
 # cshmarks alias
 alias l     'source ~/.cshmarks/list'

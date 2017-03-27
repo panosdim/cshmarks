@@ -9,7 +9,7 @@ else
     exit
   else
     # Check if bookmark exists
-    set bm = `sed -n "/^$1 /p" "$SDIRS"`
+    set bm = `\sed -n "/^$1 /p" "$CDIRS"`
     if ( "$bm" == "" ) then
       echo "\033[0;31mbookmark name not exists\033[0m"
       exit
@@ -20,8 +20,8 @@ else
     set t = `mktemp -t bashmarks.XXXXXX || exit 1`
 
     # purge line
-    sed "/^$1 /d" "$SDIRS" > "$t"
-    \mv "$t" "$SDIRS"
+    \sed "/^$1 /d" "$CDIRS" > "$t"
+    \mv "$t" "$CDIRS"
 
     # cleanup temp file
     \rm -f -- "$t"
