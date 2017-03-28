@@ -11,5 +11,5 @@ alias g     'source ~/.cshmarks/goto'
 alias d     'source ~/.cshmarks/delete'
 
 # completion command
-complete g 'p/1/`cat $SDIRS | cut -d" " -f1`/'
-complete d 'p/1/`cat $SDIRS | cut -d" " -f1`/'
+complete g 'p/1/`cat $CDIRS | cut -d" " -f1`/'
+complete d 'p/1/`cat $CDIRS | cut -d" " -f1`/'
